@@ -33,7 +33,7 @@ nativecountry = st.text_input("Enter your native country name")
 
 # prediction button 
 if st.button("prediction"):
-
+    
     data = {
             "age":int(age),
             "workclass":workclass,
@@ -52,7 +52,7 @@ if st.button("prediction"):
     
     # API request generate
     
-    resp = requests.post("http://127.0.0.1:8000/pred", params=data)
+    resp = requests.post("https://tauheed1880-fastapi-backend.hf.space", params=data)
     
 
     result = resp.json()
